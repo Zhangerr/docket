@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8"> 
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
+      <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+   
+<style>
+    body {
+       background-color: #eee;
+       text-align: center;
+    }
+
+    #calendar-text{
+      text-align: center
+    }
+   
+    .red { background-color: #E60000}
+    .orange { background-color: #FF6600}
+    .yellow { background-color: #FFCC00}
+    .green { background-color: #00B800}
+    .blue { background-color: #0000FF}
+    .purple { background-color: #990099
+}
+    .color {
+     height:70px;
+     margin-bottom:5px;
+     border-radius:300px;
+     width:70px;
+     display:inline-block;
+
+    }
+    .colors {
+      margin-bottom:20px;
+    }
+    .color:first-child {
+   //   border-top-right-radius:5px;
+   //   border-top-left-radius:5px;
+    }
+    .color:hover {
+      box-shadow:0 0 8px 0px rgba(42, 173, 247, 0.91)
+    }
+    .color:last-child {
+  //    border-bottom-right-radius:5px;
+  //    border-bottom-left-radius:5px;
+    }
+    .navbar .container-fluid {
+      padding:0;
+    }
+        .nav,.nav li {
+      width:100%;
+    } 
+    .size {font-size:2em;
+    }
+    .searchBoxSize {height: 50px;
+      width: 100px;}
+    .row [class^="col"] {
+      padding-right:0;
+      padding-left:0;
+    }
+    .navbar-nav>li>a {
+      padding:11px 10px;
+    }
+    p {
+      margin:0 !important;
+    }
+    .navbar-nav>li>p {
+      font-size:1.5em;
+      font-weight:bold;
+      padding:11px 0px;
+      
+     // padding-top:25px;
+    line-height: 1.8em;
+    }
+    .navbar-nav {
+        margin:0;
+    }
+    .nav-text{
+      font-family:"Coming Soon" !important;
+
+    }
+
+    
+    .ttl {
+      padding:20px !important;
+    }
+    .addcal {
+      padding:0 !important;
+    }
+
+    .color-text{
+      font-family: "Coming Soon";
+      font-size: 1.5em;
+    }
+   </style>
+   
+   
+   </head>
+   <body>
+       <nav class="navbar navbar-default" role="navigation">
+     <div class="container-fluid">
+       <!-- Brand and toggle get grouped for better mobile display -->
+
+
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div>
+     
+           <div class="col-xs-3">
+           <ul class="nav navbar-nav ">
+             <li class="text-center"><a href="#"> <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button> </a></li>
+           </ul>
+           </div>
+           <div class="col-xs-6 addcal">
+           <ul class="nav navbar-nav ">
+               <li class="text-center"><p class="nav-text">Add a Calendar</li>
+                </ul>
+           </div>
+           <div class="col-xs-3">
+           <ul class="nav navbar-nav ">
+              <li class="text-center"><a href="#"> <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button> </a></li>
+                </ul>
+           </div>
+      
+       </div><!-- /.navbar-collapse -->
+     </div><!-- /.container-fluid -->
+   </nav>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins)  -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files 
+            as needed -->
+      <script src="js/bootstrap.min.js"></script>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 ttl">
+      <form class="form-signin" role="form">
+        <input type="title" class="form-control form-group title" placeholder="Title" required autofocus>     
+      </form>
+      <h2 class="color-text">Choose Color</h2>
+      <div class="colors">
+      <div class="color red"></div>
+      <div class="color orange"></div>
+       <div class="color yellow"></div> <br />
+      <div class="color green"></div>
+      <div class="color blue"></div>
+      <div class="color purple"></div>
+      </div>
+      <select name="yearpicker" id="yearpicker"></select>
+      <button type="submit" class="btn btn-block btn-lg btn-default">wow</button>
+    </div>
+  </div>
+</div>  
+<script>
+  for (i = new Date().getFullYear(); i > new Date().getFullYear()-5; i--)
+  {
+      $('#yearpicker').append($('<option />').val(i).html(i));
+  }
+</script>
+
+   </body>
+</html>
